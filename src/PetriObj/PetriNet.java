@@ -107,6 +107,8 @@ public class PetriNet implements Cloneable, Serializable {
 
     }
 
+  
+
     /**
      *
      * @return name of Petri net

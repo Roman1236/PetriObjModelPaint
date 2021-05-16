@@ -4,11 +4,14 @@
  */
 package graphpresentation;
 
+import Experiments.EvolutionOptimization;
+import LibTest.Kursach;
 import PetriObj.ExceptionInvalidNetStructure;
 import PetriObj.ExceptionInvalidTimeDelay;
 import PetriObj.PetriP;
 import PetriObj.PetriSim;
 import PetriObj.PetriT;
+import Experiments.FactExp;
 import graphreuse.GraphNetParametersFrame;
 
 import java.awt.*;
@@ -296,6 +299,9 @@ public class PetriNetsFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         petriNetDesign = new javax.swing.JPanel();
         modelingParametersPanel = new javax.swing.JPanel();
@@ -367,6 +373,70 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         timeStartField2 = new javax.swing.JTextField();
         timeModelingLabel2 = new javax.swing.JLabel();
         timeModelingTextField2 = new javax.swing.JTextField();
+        optPane = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        incomingDataLabel = new javax.swing.JLabel();
+        fName = new javax.swing.JLabel();
+        fName1 = new javax.swing.JTextField();
+        fName2 = new javax.swing.JTextField();
+        fName3 = new javax.swing.JTextField();
+        fName4 = new javax.swing.JTextField();
+        fName5 = new javax.swing.JTextField();
+        fValue = new javax.swing.JLabel();
+        lLimit = new javax.swing.JLabel();
+        uLimit = new javax.swing.JLabel();
+        fValue1 = new javax.swing.JTextField();
+        fValue2 = new javax.swing.JTextField();
+        fValue3 = new javax.swing.JTextField();
+        fValue4 = new javax.swing.JTextField();
+        fValue5 = new javax.swing.JTextField();
+        lLimit1 = new javax.swing.JTextField();
+        lLimit2 = new javax.swing.JTextField();
+        lLimit3 = new javax.swing.JTextField();
+        lLimit4 = new javax.swing.JTextField();
+        lLimit5 = new javax.swing.JTextField();
+        uLimit1 = new javax.swing.JTextField();
+        uLimit2 = new javax.swing.JTextField();
+        uLimit3 = new javax.swing.JTextField();
+        uLimit4 = new javax.swing.JTextField();
+        uLimit5 = new javax.swing.JTextField();
+        jRadioButtonFullPlan = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        regressionResults = new javax.swing.JTextArea();
+        startFactExpButton = new javax.swing.JButton();
+        factExpPlan = new javax.swing.JLabel();
+        jRadioButton2FracPlan = new javax.swing.JRadioButton();
+        BetaLabel = new javax.swing.JLabel();
+        responseVariableLabel = new javax.swing.JLabel();
+        responseVariable = new javax.swing.JTextField();
+        Beta = new javax.swing.JTextField();
+        EpsilonLabel = new javax.swing.JLabel();
+        SigmaLabel = new javax.swing.JLabel();
+        Epsilon = new javax.swing.JTextField();
+        Sigma = new javax.swing.JTextField();
+        jRadioButtonNormDistribution = new javax.swing.JRadioButton();
+        distributionLabel = new javax.swing.JLabel();
+        jRadioButtonOtherDistribution = new javax.swing.JRadioButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        oLlimit1 = new javax.swing.JTextField();
+        oLlimit2 = new javax.swing.JTextField();
+        oUlimit1 = new javax.swing.JTextField();
+        oUlimit2 = new javax.swing.JTextField();
+        oLlimit3 = new javax.swing.JTextField();
+        oUlimit3 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        optimizationResults = new javax.swing.JTextArea();
+        opt_Button = new javax.swing.JButton();
+        gNum = new javax.swing.JTextField();
+        elNum = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         petriNetsFrameMenuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -386,7 +456,6 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         itemAnimateEvent = new javax.swing.JMenuItem();
         runMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem itemRunNet = new javax.swing.JMenuItem();
-        javax.swing.JMenuItem itemResetNet = new javax.swing.JMenuItem();
         itemRunEvent = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -493,20 +562,16 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         petriNetsFrameToolBar.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
         newPlaceButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        newPlaceButton.setToolTipText("");
         newPlaceButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 10));
         newPlaceButton.setFocusable(false);
         newPlaceButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         newPlaceButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        newPlaceButton.setToolTipText("Alt+1");
-        newPlaceButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, InputEvent.ALT_DOWN_MASK), "NewPosition");
-        Action newPlaceAction = new AbstractAction() {
-            @Override
+        newPlaceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newPlaceButtonActionPerformed(evt);
             }
-        };
-        newPlaceButton.getActionMap().put("NewPosition", newPlaceAction);
-        newPlaceButton.addActionListener(newPlaceAction);
+        });
         petriNetsFrameToolBar.add(newPlaceButton);
 
         newTransitionButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -515,16 +580,11 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         newTransitionButton.setFocusable(false);
         newTransitionButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         newTransitionButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        newTransitionButton.setToolTipText("Alt+2");
-        newTransitionButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, InputEvent.ALT_DOWN_MASK), "newTransition");
-        Action newTransitionAction = new AbstractAction() {
-            @Override
+        newTransitionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newTransitionButtonActionPerformed(evt);
             }
-        };
-        newTransitionButton.getActionMap().put("newTransition", newTransitionAction);
-        newTransitionButton.addActionListener(newTransitionAction);
+        });
         petriNetsFrameToolBar.add(newTransitionButton);
 
         newArcButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -533,16 +593,11 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         newArcButton.setFocusable(false);
         newArcButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         newArcButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        newArcButton.setToolTipText("Alt+3");
-        newArcButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, InputEvent.ALT_DOWN_MASK), "newArc");
-        Action newArcAction = new AbstractAction() {
-            @Override
+        newArcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newArcButtonActionPerformed(evt);
             }
-        };
-        newArcButton.getActionMap().put("newArc", newArcAction);
-        newArcButton.addActionListener(newArcAction);
+        });
         petriNetsFrameToolBar.add(newArcButton);
 
         petriNetsFrameSplitPane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -551,7 +606,6 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         petriNetsFrameSplitPane.setAutoscrolls(true);
         petriNetsFrameSplitPane.setMinimumSize(new java.awt.Dimension(405, 202));
 
-        petriNetPanelScrollPane.setBackground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane.setBorder(null);
         petriNetPanelScrollPane.setForeground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane.setAutoscrolls(true);
@@ -601,7 +655,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         modelingResultsPanel.setLayout(modelingResultsPanelLayout);
         modelingResultsPanelLayout.setHorizontalGroup(
             modelingResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(modelingResultsSplitPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+            .addComponent(modelingResultsSplitPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
         );
         modelingResultsPanelLayout.setVerticalGroup(
             modelingResultsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -652,13 +706,13 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             .addComponent(modelingParametersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(petriNetDesignLayout.createSequentialGroup()
                 .addGap(183, 183, 183)
-                .addComponent(petriNetsFrameSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+                .addComponent(petriNetsFrameSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(petriNetDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(petriNetDesignLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(leftNenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(647, Short.MAX_VALUE)))
+                    .addContainerGap(761, Short.MAX_VALUE)))
         );
         petriNetDesignLayout.setVerticalGroup(
             petriNetDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -756,7 +810,6 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         petriNetsFrameSplitPane1.setAutoscrolls(true);
         petriNetsFrameSplitPane1.setMinimumSize(new java.awt.Dimension(405, 202));
 
-        petriNetPanelScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane1.setBorder(new javax.swing.border.MatteBorder(null));
         petriNetPanelScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane1.setAutoscrolls(true);
@@ -842,17 +895,17 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             modelingParametersPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modelingParametersPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(netNameLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                .addComponent(netNameLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(netNameTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(netNameTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                 .addGap(10, 10, 10)
                 .addComponent(timeStartLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeStartField1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addComponent(timeStartField1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(timeModelingLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeModelingTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addComponent(timeModelingTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
                 .addContainerGap())
         );
         modelingParametersPanel1Layout.setVerticalGroup(
@@ -899,8 +952,8 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             .addGroup(petriNetDesign1Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(petriNetDesign1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(petriNetsFrameSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
-                    .addComponent(petriNetsFrameToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE))
+                    .addComponent(petriNetsFrameSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 941, Short.MAX_VALUE)
+                    .addComponent(petriNetsFrameToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 941, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
         petriNetDesign1Layout.setVerticalGroup(
@@ -985,7 +1038,6 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         petriNetsFrameSplitPane2.setAutoscrolls(true);
         petriNetsFrameSplitPane2.setMinimumSize(new java.awt.Dimension(405, 202));
 
-        petriNetPanelScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane2.setBorder(new javax.swing.border.MatteBorder(null));
         petriNetPanelScrollPane2.setForeground(new java.awt.Color(255, 255, 255));
         petriNetPanelScrollPane2.setAutoscrolls(true);
@@ -1071,17 +1123,17 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             modelingParametersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modelingParametersPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(netNameLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                .addComponent(netNameLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(netNameTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                .addComponent(netNameTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                 .addGap(10, 10, 10)
-                .addComponent(timeStartLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(timeStartLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeStartField2, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addComponent(timeStartField2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(timeModelingLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                .addComponent(timeModelingLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeModelingTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addComponent(timeModelingTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         modelingParametersPanel2Layout.setVerticalGroup(
@@ -1128,8 +1180,8 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             .addGroup(petriNetDesign2Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(petriNetDesign2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(petriNetsFrameSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
-                    .addComponent(petriNetsFrameToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE))
+                    .addComponent(petriNetsFrameSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 941, Short.MAX_VALUE)
+                    .addComponent(petriNetsFrameToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, 941, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
         petriNetDesign2Layout.setVerticalGroup(
@@ -1154,13 +1206,391 @@ public class PetriNetsFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Experiment designer", jPanel1);
 
+        incomingDataLabel.setText("Incoming data");
+
+        fName.setText("Factor name");
+
+        fName1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fName1ActionPerformed(evt);
+            }
+        });
+
+        fName2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fName2ActionPerformed(evt);
+            }
+        });
+
+        fValue.setText("Factor value");
+
+        lLimit.setText("Lower limit");
+
+        uLimit.setText("Upper limit");
+
+        fValue2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fValue2ActionPerformed(evt);
+            }
+        });
+
+        fValue4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fValue4ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonFullPlan);
+        jRadioButtonFullPlan.setSelected(true);
+        jRadioButtonFullPlan.setText("Full");
+        jRadioButtonFullPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonFullPlanActionPerformed(evt);
+            }
+        });
+
+        regressionResults.setColumns(20);
+        regressionResults.setRows(5);
+        jScrollPane1.setViewportView(regressionResults);
+
+        startFactExpButton.setText("Start");
+        startFactExpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startFactExpButtonActionPerformed(evt);
+            }
+        });
+
+        factExpPlan.setText("Factorial experiment plan");
+
+        buttonGroup1.add(jRadioButton2FracPlan);
+        jRadioButton2FracPlan.setText("Fractional");
+        jRadioButton2FracPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2FracPlanActionPerformed(evt);
+            }
+        });
+
+        BetaLabel.setText("Beta");
+
+        responseVariableLabel.setText("Response variable");
+
+        Beta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BetaActionPerformed(evt);
+            }
+        });
+
+        EpsilonLabel.setText("Epsilon");
+
+        SigmaLabel.setText("Sigma");
+
+        Epsilon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EpsilonActionPerformed(evt);
+            }
+        });
+
+        Sigma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SigmaActionPerformed(evt);
+            }
+        });
+
+        buttonGroup2.add(jRadioButtonNormDistribution);
+        jRadioButtonNormDistribution.setSelected(true);
+        jRadioButtonNormDistribution.setText("Norm");
+
+        distributionLabel.setText("Distribution");
+
+        buttonGroup2.add(jRadioButtonOtherDistribution);
+        jRadioButtonOtherDistribution.setText("Other");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(incomingDataLabel)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fName)
+                                    .addComponent(fName1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fName2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fName3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fName4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fName5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(fValue)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(lLimit))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(fValue1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fValue3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fValue4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(33, 33, 33)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lLimit5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lLimit4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lLimit3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lLimit2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lLimit1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(33, 33, 33)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uLimit)
+                                    .addComponent(uLimit1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(uLimit2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(uLimit3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(uLimit4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(uLimit5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(responseVariableLabel)
+                            .addComponent(responseVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(factExpPlan)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButtonFullPlan)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRadioButton2FracPlan)))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(92, 92, 92)
+                                        .addComponent(jRadioButtonNormDistribution)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRadioButtonOtherDistribution))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(114, 114, 114)
+                                        .addComponent(distributionLabel))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Beta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(BetaLabel)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(EpsilonLabel)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(SigmaLabel))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(Epsilon, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Sigma, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(startFactExpButton)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(incomingDataLabel)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName)
+                            .addComponent(fValue)
+                            .addComponent(lLimit)
+                            .addComponent(uLimit))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fValue1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lLimit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uLimit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fValue2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lLimit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uLimit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fValue3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lLimit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uLimit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fValue4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lLimit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uLimit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fName5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fValue5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lLimit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uLimit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(factExpPlan)
+                                    .addComponent(distributionLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButtonFullPlan)
+                                    .addComponent(jRadioButton2FracPlan)
+                                    .addComponent(jRadioButtonNormDistribution)
+                                    .addComponent(jRadioButtonOtherDistribution))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(BetaLabel)
+                                    .addComponent(EpsilonLabel)
+                                    .addComponent(SigmaLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Beta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Epsilon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Sigma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(responseVariableLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(responseVariable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 123, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(startFactExpButton)))))
+                .addContainerGap())
+        );
+
+        optPane.addTab("Factorial experiment", jPanel2);
+
+        jLabel2.setText("Lower limit");
+
+        jLabel3.setText("Upper limit");
+
+        jLabel4.setText("Factor name");
+
+        jLabel5.setText("T1");
+
+        jLabel6.setText("T2");
+
+        jLabel7.setText("T5");
+
+        optimizationResults.setColumns(20);
+        optimizationResults.setRows(5);
+        jScrollPane2.setViewportView(optimizationResults);
+
+        opt_Button.setText("Start");
+        opt_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opt_ButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Generation number");
+
+        jLabel8.setText("Number of elements");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(opt_Button))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(oLlimit1)
+                                    .addComponent(oLlimit2)
+                                    .addComponent(oLlimit3))
+                                .addGap(29, 29, 29)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(oUlimit1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addComponent(oUlimit2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addComponent(oUlimit3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(elNum, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gNum, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(43, 43, 43)))))
+                .addGap(110, 110, 110)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(oLlimit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(oUlimit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(oLlimit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(oUlimit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(oLlimit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(oUlimit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(gNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(elNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(opt_Button))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+
+        optPane.addTab("Optimization", jPanel3);
+
+        jTabbedPane1.addTab("Experiments", optPane);
+
         petriNetsFrameMenuBar.setBackground(new java.awt.Color(186, 213, 241));
         petriNetsFrameMenuBar.setForeground(new java.awt.Color(98, 147, 167));
 
         fileMenu.setText("File");
         fileMenu.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
-        openMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        openMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         openMenuItem.setText("Open");
         openMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1169,7 +1599,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         fileMenu.add(openMenuItem);
 
-        newMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        newMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         newMenuItem.setText("New");
         newMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1178,7 +1608,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         fileMenu.add(newMenuItem);
 
-        openMethodMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        openMethodMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         openMethodMenuItem.setText("Open a method file");
         openMethodMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1192,7 +1622,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         editMenu.setText("Edit");
         editMenu.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
-        editNetParameters.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        editNetParameters.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         editNetParameters.setText("Edit net parameters");
         editNetParameters.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1201,7 +1631,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         editMenu.add(editNetParameters);
 
-        centerLocationOfGraphNet.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
+        centerLocationOfGraphNet.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         centerLocationOfGraphNet.setText("Locate net in center");
         centerLocationOfGraphNet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1215,7 +1645,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         save.setText("Save");
         save.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
-        SaveGraphNet.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        SaveGraphNet.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         SaveGraphNet.setText("Save Graph net");
         SaveGraphNet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1224,7 +1654,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         save.add(SaveGraphNet);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem2.setText("Save Graph net as");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1233,7 +1663,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         save.add(jMenuItem2);
 
-        SavePetriNetAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        SavePetriNetAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         SavePetriNetAs.setText("Save  Petri net as");
         SavePetriNetAs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1242,7 +1672,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         save.add(SavePetriNetAs);
 
-        SaveNetAsMethod.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        SaveNetAsMethod.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         SaveNetAsMethod.setText("Save net as method");
         SaveNetAsMethod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1251,7 +1681,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         });
         save.add(SaveNetAsMethod);
 
-        SaveMethodInNetLibrary.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        SaveMethodInNetLibrary.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         SaveMethodInNetLibrary.setText("Save method in NetLibrary");
         SaveMethodInNetLibrary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1301,14 +1731,6 @@ public class PetriNetsFrame extends javax.swing.JFrame {
             }
         });
         runMenu.add(itemRunEvent);
-
-        itemResetNet.setText("Reset");
-        itemResetNet.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemResetNetActionPerformed(evt);
-            }
-        });
-        runMenu.add(itemResetNet);
 
         petriNetsFrameMenuBar.add(runMenu);
 
@@ -1500,6 +1922,153 @@ public class PetriNetsFrame extends javax.swing.JFrame {
         }.start();
     }//GEN-LAST:event_itemRunEventActionPerformed
 
+    private void SigmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SigmaActionPerformed
+
+    private void EpsilonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EpsilonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EpsilonActionPerformed
+
+    private void BetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BetaActionPerformed
+
+    private void jRadioButton2FracPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2FracPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2FracPlanActionPerformed
+
+    private void startFactExpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startFactExpButtonActionPerformed
+        FactExp factExp = new FactExp();
+
+        if(!Beta.getText().isEmpty()) {      //////////////добавить exception
+            factExp.setBeta(new Double(Beta.getText()));
+        }
+        if(!Epsilon.getText().isEmpty()) {
+            factExp.setEpsilon(new Double(Epsilon.getText()));
+        }
+        if(!Sigma.getText().isEmpty()) {
+            factExp.setSigma(new Double(Sigma.getText()));
+        }
+
+        if(jRadioButtonNormDistribution.isSelected()) {
+            factExp.setDistribution("norm");
+        }
+        else {
+            factExp.setDistribution("other");
+        }
+        if(jRadioButtonFullPlan.isSelected()) {
+            factExp.setPlan("full");
+        }
+        else{
+            factExp.setPlan("fractional");
+        }
+
+        ArrayList<Double> fValueArr = new ArrayList<>();
+        if(!fValue1.getText().isEmpty())
+        fValueArr.add(new Double(fValue1.getText()));
+        if(!fValue2.getText().isEmpty())
+        fValueArr.add(new Double(fValue2.getText()));
+        if(!fValue3.getText().isEmpty())
+        fValueArr.add(new Double(fValue3.getText()));
+        if(!fValue4.getText().isEmpty())
+        fValueArr.add(new Double(fValue4.getText()));
+        if(!fValue5.getText().isEmpty())
+        fValueArr.add(new Double(fValue5.getText()));
+        factExp.setfValueList(fValueArr);
+
+        ArrayList<Double> lLimitArr = new ArrayList<>();
+        if(!lLimit1.getText().isEmpty())
+        lLimitArr.add(new Double(lLimit1.getText()));
+        if(!lLimit2.getText().isEmpty())
+        lLimitArr.add(new Double(lLimit2.getText()));
+        if(!lLimit3.getText().isEmpty())
+        lLimitArr.add(new Double(lLimit3.getText()));
+        if(!lLimit4.getText().isEmpty())
+        lLimitArr.add(new Double(lLimit4.getText()));
+        if(!lLimit5.getText().isEmpty())
+        lLimitArr.add(new Double(lLimit5.getText()));
+        factExp.setlLimitList(lLimitArr);
+
+        ArrayList<Double> uLimitArr = new ArrayList<>();
+        if(!uLimit1.getText().isEmpty())
+        uLimitArr.add(new Double(uLimit1.getText()));
+        if(!uLimit2.getText().isEmpty())
+        uLimitArr.add(new Double(uLimit2.getText()));
+        if(!uLimit3.getText().isEmpty())
+        uLimitArr.add(new Double(uLimit3.getText()));
+        if(!uLimit4.getText().isEmpty())
+        uLimitArr.add(new Double(uLimit4.getText()));
+        if(!uLimit5.getText().isEmpty())
+        uLimitArr.add(new Double(uLimit5.getText()));
+        factExp.setuLimitList(uLimitArr);
+
+
+
+        if(!fName1.getText().isEmpty())
+        factExp.getfNameList().add(fName1.getText());
+        if(!fName2.getText().isEmpty())
+        factExp.getfNameList().add(fName2.getText());
+        if(!fName3.getText().isEmpty())
+        factExp.getfNameList().add(fName3.getText());
+        if(!fName4.getText().isEmpty())
+        factExp.getfNameList().add(fName4.getText());
+        if(!fName5.getText().isEmpty())
+        factExp.getfNameList().add(fName5.getText());
+
+        int factorNum = factExp.getfNameList().size();
+
+        try{
+            factExp.exp(Kursach.getModel(), factorNum, factExp.getBeta(), factExp.getSigma(), factExp.getEpsilon(), factExp.getPlan(), "", factExp.getDistribution());
+            regressionResults.append(factExp.getTextOutputField());
+        }
+        catch(ExceptionInvalidNetStructure e) {
+            System.out.println("setmodel error1");
+        }
+        catch(ExceptionInvalidTimeDelay e) {
+            System.out.println("setmodel error2");
+        }
+    }//GEN-LAST:event_startFactExpButtonActionPerformed
+
+    private void jRadioButtonFullPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonFullPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonFullPlanActionPerformed
+
+    private void fValue4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fValue4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fValue4ActionPerformed
+
+    private void fValue2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fValue2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fValue2ActionPerformed
+
+    private void fName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fName2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fName2ActionPerformed
+
+    private void fName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fName1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fName1ActionPerformed
+
+    private void opt_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opt_ButtonActionPerformed
+        ArrayList<Double> oLlimit = new ArrayList<>();
+        ArrayList<Double> oUlimit = new ArrayList<>();
+        
+        oLlimit.add(new Double(oLlimit1.getText()));
+        oLlimit.add(new Double(oLlimit2.getText()));
+        oLlimit.add(new Double(oLlimit3.getText()));
+        oUlimit.add(new Double(oUlimit1.getText()));
+        oUlimit.add(new Double(oUlimit2.getText()));
+        oUlimit.add(new Double(oUlimit3.getText()));
+        
+        int gN = Integer.parseInt(gNum.getText());
+        int elN = Integer.parseInt(elNum.getText());
+        
+        EvolutionOptimization opt = new EvolutionOptimization(oLlimit, oUlimit, gN, elN);
+        opt.optimizeModel();
+        optimizationResults.append(opt.getOutput());                        
+    }//GEN-LAST:event_opt_ButtonActionPerformed
+ 
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_openMenuItemActionPerformed
         try {
             fileUse.newWorksheet(getPetriNetsPanel());
@@ -2007,20 +2576,68 @@ public class PetriNetsFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Animate;
+    private javax.swing.JTextField Beta;
+    private javax.swing.JLabel BetaLabel;
+    private javax.swing.JTextField Epsilon;
+    private javax.swing.JLabel EpsilonLabel;
     private javax.swing.JMenuItem SaveGraphNet;
     private javax.swing.JMenuItem SaveMethodInNetLibrary;
     private javax.swing.JMenuItem SaveNetAsMethod;
     private javax.swing.JMenuItem SavePetriNetAs;
+    private javax.swing.JTextField Sigma;
+    private javax.swing.JLabel SigmaLabel;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JMenuItem centerLocationOfGraphNet;
+    private javax.swing.JLabel distributionLabel;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem editNetParameters;
+    private javax.swing.JTextField elNum;
+    private javax.swing.JLabel fName;
+    private javax.swing.JTextField fName1;
+    private javax.swing.JTextField fName2;
+    private javax.swing.JTextField fName3;
+    private javax.swing.JTextField fName4;
+    private javax.swing.JTextField fName5;
+    private javax.swing.JLabel fValue;
+    private javax.swing.JTextField fValue1;
+    private javax.swing.JTextField fValue2;
+    private javax.swing.JTextField fValue3;
+    private javax.swing.JTextField fValue4;
+    private javax.swing.JTextField fValue5;
+    private javax.swing.JLabel factExpPlan;
     private javax.swing.JMenu fileMenu;
+    private javax.swing.JTextField gNum;
+    private javax.swing.JLabel incomingDataLabel;
     private javax.swing.JMenuItem itemAnimateEvent;
     private javax.swing.JMenuItem itemAnimateNet;
     private javax.swing.JMenuItem itemRunEvent;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton2FracPlan;
+    private javax.swing.JRadioButton jRadioButtonFullPlan;
+    private javax.swing.JRadioButton jRadioButtonNormDistribution;
+    private javax.swing.JRadioButton jRadioButtonOtherDistribution;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lLimit;
+    private javax.swing.JTextField lLimit1;
+    private javax.swing.JTextField lLimit2;
+    private javax.swing.JTextField lLimit3;
+    private javax.swing.JTextField lLimit4;
+    private javax.swing.JTextField lLimit5;
     private javax.swing.JList<String> leftMenuList;
     private javax.swing.JPanel leftNenuPanel;
     private javax.swing.JPanel modelingParametersPanel;
@@ -2048,8 +2665,17 @@ public class PetriNetsFrame extends javax.swing.JFrame {
     private javax.swing.JButton newTransitionButton;
     private javax.swing.JButton newTransitionButton1;
     private javax.swing.JButton newTransitionButton2;
+    private javax.swing.JTextField oLlimit1;
+    private javax.swing.JTextField oLlimit2;
+    private javax.swing.JTextField oLlimit3;
+    private javax.swing.JTextField oUlimit1;
+    private javax.swing.JTextField oUlimit2;
+    private javax.swing.JTextField oUlimit3;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem openMethodMenuItem;
+    private javax.swing.JTabbedPane optPane;
+    private javax.swing.JButton opt_Button;
+    private javax.swing.JTextArea optimizationResults;
     private javax.swing.JPanel petriNetDesign;
     private javax.swing.JPanel petriNetDesign1;
     private javax.swing.JPanel petriNetDesign2;
@@ -2069,6 +2695,9 @@ public class PetriNetsFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane protokolScrollPane2;
     private javax.swing.JTextArea protokolTextArea1;
     private javax.swing.JTextArea protokolTextArea2;
+    private javax.swing.JTextArea regressionResults;
+    private javax.swing.JTextField responseVariable;
+    private javax.swing.JLabel responseVariableLabel;
     private javax.swing.JButton runEventButton1;
     private javax.swing.JButton runEventButton2;
     private javax.swing.JMenu runMenu;
@@ -2078,6 +2707,7 @@ public class PetriNetsFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JLabel speedLabel;
     private javax.swing.JSlider speedSlider;
+    private javax.swing.JButton startFactExpButton;
     private javax.swing.JScrollPane statisticsScrollPane;
     private javax.swing.JScrollPane statisticsScrollPane1;
     private javax.swing.JScrollPane statisticsScrollPane2;
@@ -2096,6 +2726,12 @@ public class PetriNetsFrame extends javax.swing.JFrame {
     private javax.swing.JLabel timeStartLabel;
     private javax.swing.JLabel timeStartLabel1;
     private javax.swing.JLabel timeStartLabel2;
+    private javax.swing.JLabel uLimit;
+    private javax.swing.JTextField uLimit1;
+    private javax.swing.JTextField uLimit2;
+    private javax.swing.JTextField uLimit3;
+    private javax.swing.JTextField uLimit4;
+    private javax.swing.JTextField uLimit5;
     // End of variables declaration//GEN-END:variables
     private static PetriNetsPanel petriNetsPanel;
     private FileUse fileUse = new FileUse();

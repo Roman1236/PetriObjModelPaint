@@ -2,6 +2,12 @@
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="petriNetsFrameMenuBar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -278,14 +284,14 @@
                   <Component id="modelingParametersPanel" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
-                      <Component id="petriNetsFrameSplitPane" pref="634" max="32767" attributes="0"/>
+                      <Component id="petriNetsFrameSplitPane" pref="748" max="32767" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="leftNenuPanel" min="-2" pref="170" max="-2" attributes="0"/>
-                          <EmptySpace pref="647" max="32767" attributes="0"/>
+                          <EmptySpace pref="761" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -610,7 +616,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="modelingResultsSplitPane" alignment="1" pref="429" max="32767" attributes="0"/>
+                          <Component id="modelingResultsSplitPane" alignment="1" pref="543" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -797,8 +803,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="petriNetsFrameSplitPane1" alignment="0" pref="827" max="32767" attributes="0"/>
-                          <Component id="petriNetsFrameToolBar1" alignment="0" pref="827" max="32767" attributes="0"/>
+                          <Component id="petriNetsFrameSplitPane1" alignment="0" pref="941" max="32767" attributes="0"/>
+                          <Component id="petriNetsFrameToolBar1" alignment="0" pref="941" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   </Group>
@@ -1121,17 +1127,17 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="netNameLabel1" pref="93" max="32767" attributes="0"/>
+                                  <Component id="netNameLabel1" pref="120" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="netNameTextField1" pref="119" max="32767" attributes="0"/>
+                                  <Component id="netNameTextField1" pref="143" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Component id="timeStartLabel1" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="timeStartField1" pref="118" max="32767" attributes="0"/>
+                                  <Component id="timeStartField1" pref="145" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                   <Component id="timeModelingLabel1" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="timeModelingTextField1" pref="118" max="32767" attributes="0"/>
+                                  <Component id="timeModelingTextField1" pref="145" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1269,8 +1275,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="petriNetsFrameSplitPane2" alignment="0" pref="827" max="32767" attributes="0"/>
-                              <Component id="petriNetsFrameToolBar2" alignment="0" pref="827" max="32767" attributes="0"/>
+                              <Component id="petriNetsFrameSplitPane2" alignment="0" pref="941" max="32767" attributes="0"/>
+                              <Component id="petriNetsFrameToolBar2" alignment="0" pref="941" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                       </Group>
@@ -1568,17 +1574,17 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                                      <Component id="netNameLabel2" pref="77" max="32767" attributes="0"/>
+                                      <Component id="netNameLabel2" pref="97" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                                      <Component id="netNameTextField2" pref="101" max="32767" attributes="0"/>
+                                      <Component id="netNameTextField2" pref="118" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="timeStartLabel2" pref="75" max="32767" attributes="0"/>
+                                      <Component id="timeStartLabel2" pref="101" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                                      <Component id="timeStartField2" pref="99" max="32767" attributes="0"/>
+                                      <Component id="timeStartField2" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                                      <Component id="timeModelingLabel2" pref="95" max="32767" attributes="0"/>
+                                      <Component id="timeModelingLabel2" pref="112" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                                      <Component id="timeModelingTextField2" pref="99" max="32767" attributes="0"/>
+                                      <Component id="timeModelingTextField2" pref="116" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -1684,6 +1690,618 @@
                     </Container>
                   </SubComponents>
                 </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="optPane">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Experiments">
+                <Property name="tabTitle" type="java.lang.String" value="Experiments"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel2">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Factorial experiment">
+                    <Property name="tabTitle" type="java.lang.String" value="Factorial experiment"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="incomingDataLabel" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="fName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fName1" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="fName2" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="fName3" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="fName4" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="fName5" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="fValue" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="lLimit" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="fValue1" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="fValue2" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="fValue3" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="fValue4" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="fValue5" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="lLimit5" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="lLimit4" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="lLimit3" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="lLimit2" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <Component id="lLimit1" min="-2" pref="55" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="uLimit" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="uLimit1" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="uLimit2" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="uLimit3" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="uLimit4" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="uLimit5" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="responseVariableLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="responseVariable" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="factExpPlan" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jRadioButtonFullPlan" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButton2FracPlan" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonNormDistribution" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonOtherDistribution" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                                                  <Component id="distributionLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="Beta" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                  <Component id="BetaLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                                  <Component id="EpsilonLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Component id="SigmaLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="Epsilon" min="-2" pref="55" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="Sigma" min="-2" pref="55" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="startFactExpButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" pref="574" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="incomingDataLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fName5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fValue5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lLimit5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uLimit5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="factExpPlan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="distributionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jRadioButtonFullPlan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton2FracPlan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButtonNormDistribution" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButtonOtherDistribution" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="BetaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="EpsilonLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="SigmaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="Beta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Epsilon" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Sigma" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="responseVariableLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="responseVariable" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="123" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="startFactExpButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="incomingDataLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Incoming data"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="fName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Factor name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fName1">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fName1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fName2">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fName2ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fName3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="fName4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="fName5">
+                </Component>
+                <Component class="javax.swing.JLabel" name="fValue">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Factor value"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lLimit">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lower limit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="uLimit">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Upper limit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fValue1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="fValue2">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fValue2ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fValue3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="fValue4">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fValue4ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fValue5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="lLimit1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="lLimit2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="lLimit3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="lLimit4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="lLimit5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="uLimit1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="uLimit2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="uLimit3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="uLimit4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="uLimit5">
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonFullPlan">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup1"/>
+                    </Property>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="Full"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonFullPlanActionPerformed"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="regressionResults">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JButton" name="startFactExpButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Start"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startFactExpButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="factExpPlan">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Factorial experiment plan"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton2FracPlan">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fractional"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2FracPlanActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="BetaLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Beta"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="responseVariableLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Response variable"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="responseVariable">
+                </Component>
+                <Component class="javax.swing.JTextField" name="Beta">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BetaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="EpsilonLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Epsilon"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="SigmaLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Sigma"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="Epsilon">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EpsilonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="Sigma">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SigmaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonNormDistribution">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup2"/>
+                    </Property>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="Norm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="distributionLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Distribution"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonOtherDistribution">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroup2"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Other"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Optimization">
+                    <Property name="tabTitle" type="java.lang.String" value="Optimization"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="opt_Button" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel5" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jLabel2" max="32767" attributes="0"/>
+                                              <Component id="oLlimit1" max="32767" attributes="0"/>
+                                              <Component id="oLlimit2" max="32767" attributes="0"/>
+                                              <Component id="oLlimit3" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel3" max="32767" attributes="0"/>
+                                              <Component id="oUlimit1" pref="0" max="32767" attributes="0"/>
+                                              <Component id="oUlimit2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                              <Component id="oUlimit3" alignment="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="elNum" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="gNum" min="-2" pref="55" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="476" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oLlimit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oUlimit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oLlimit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oUlimit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oLlimit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oUlimit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="elNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="opt_Button" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane2" min="-2" pref="414" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="74" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lower limit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Upper limit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Factor name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="T1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="T2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="T5"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="oLlimit1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="oLlimit2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="oUlimit1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="oUlimit2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="oLlimit3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="oUlimit3">
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="optimizationResults">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JButton" name="opt_Button">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Start"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opt_ButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="gNum">
+                </Component>
+                <Component class="javax.swing.JTextField" name="elNum">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Generation number"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Number of elements"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>

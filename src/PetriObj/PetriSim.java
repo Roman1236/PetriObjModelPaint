@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.*;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
+import java.util.stream.Collectors;
 
 /**
  * This class is Petri simulator. <br>
@@ -201,11 +202,24 @@ public class PetriSim implements Cloneable, Serializable {
      */
     public ArrayList<PetriT> findActiveT() {
         ArrayList<PetriT> aT = new ArrayList<PetriT>();
-
+        List<PetriP> list = new ArrayList<PetriP>();
+        for(int j = 0; j < this.listP.length; j++)
+        {
+            list.add(this.listP[j]);
+        }
         for (PetriT transition : listT) {
-            if ((transition.condition(listP) == true) && (transition.getProbability() != 0)) {
+            if ((transition.condition(listP) == true) && (transition.getProbability() != 0) && (!"замовити".equals(transition.getName()))) {
                 aT.add(transition);
-
+            }
+            else if((transition.condition(listP) == true) && (transition.getProbability() != 0) && "замовити".equals(transition.getName()))
+            {
+                int storage = list.stream().filter(x -> x.getName().equals("запаси")).collect(Collectors.toList()).get(0).getMark();
+                int orders = list.stream().filter(x -> x.getName().equals("кількість замовлень")).collect(Collectors.toList()).get(0).getMark();
+                int notSatisfied = list.stream().filter(x -> x.getName().equals("невдоволений попит")).collect(Collectors.toList()).get(0).getMark();
+                if(storage + orders - notSatisfied <= 18)
+                {
+                    aT.add(transition);
+                }
             }
         }
 
